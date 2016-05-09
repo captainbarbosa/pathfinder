@@ -1,0 +1,5 @@
+leif_ericksson:
+  email: leif@explorer.com
+  encrypted_password: "<%= Devise::Encryptor.digest User, "password" %>"
+  first_name: "Leif"
+  last_name: "Ericksson"

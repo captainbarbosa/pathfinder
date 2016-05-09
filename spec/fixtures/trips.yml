@@ -1,0 +1,14 @@
+iceland:
+  name: Iceland
+  user: leif_ericksson
+  description: "More of like a staycation"
+
+greenland:
+  name: Greenland
+  user: leif_ericksson
+  description: "Gonna explore here for a few days"
+
+newfoundland:
+  name: Newfoundland
+  user: leif_ericksson
+  description: "Looking for a place to settle down"
