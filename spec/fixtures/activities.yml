@@ -1,19 +1,19 @@
 # ------- Activities in Iceland --------
 glacier_climbing:
   name: "Glacier Exploration"
-  trip_id: iceland
+  trip: iceland
   date: 2016-01-01 11:00:00
   description: "We will have a tour guide"
 
 blue_lagoon:
   name: "Visit the Blue Lagoon"
-  trip_id: iceland
+  trip: iceland
   date: 2016-01-02 15:00:00
   description: "The water is always warm here"
 
 fishing:
   name: "Sunrise Fishing Trip"
-  trip_id: iceland
+  trip: iceland
   date: 2016-01-03 06:00:00
   description: "Looking to catch some cod and salmon"
 
@@ -21,19 +21,19 @@ fishing:
 
 ice_climbing:
   name: "Ice Climbing"
-  trip_id: greenland
+  trip: greenland
   date: 2016-02-01 11:00:00
   description: "Pick up climbing gear at the base first"
 
 farm_visit:
   name: "Family Farm Visit"
-  trip_id: greenland
+  trip: greenland
   date: 2016-02-02 18:00:00
   description: "Auntie Ericksson will have a meal ready for us"
 
 ice_fishing:
   name: "Ice Fishing"
-  trip_id: greenland
+  trip: greenland
   date: 2016-02-03 12:00:00
   description: "Don't forget the fishing poles"
 
@@ -41,18 +41,18 @@ ice_fishing:
 
 location_scouting:
   name: "Location Scouting"
-  trip_id: newfoundland
+  trip: newfoundland
   date: 2016-03-01 09:00:00
   description: "Figure out where we should settle down"
 
 grape_farm:
   name: "Visit the Grape Farm"
-  trip_id: newfoundland
+  trip: newfoundland
   date: 2016-03-02 13:00:00
   description: "Load up a few bushels of grapes"
 
 build_houses:
   name: "Build Houses"
-  trip_id: newfoundland
+  trip: newfoundland
   date: 2016-03-03 08:00:00
   description: "Once we've found a good spot to settle in"
