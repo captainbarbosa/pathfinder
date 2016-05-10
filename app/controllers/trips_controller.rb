@@ -41,7 +41,7 @@ class TripsController < ApplicationController
 
   private
 
-  def interaction_params
+  def trip_params
     params.require(:trip).permit(:name, :description)
   end
 end
