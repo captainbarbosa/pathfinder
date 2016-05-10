@@ -1,5 +1,5 @@
 // Start doing things only when DOM is ready
-document.addEventListener("DOMContentLoaded", function(event) {
+$(document).ready(function() {
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibmJiMTI4MDUiLCJhIjoiMUlFVjZWVSJ9.jeNyiaRq8MCHlXSlGQZIHA';
 
@@ -10,4 +10,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
       center: [ -77.03656196594238,  38.89769637048576],
       zoom: 10
   });
+  
 });
