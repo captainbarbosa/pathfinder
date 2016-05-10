@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :trips do
-    resource :activities
+    resources :activities
   end
 
   root 'trips#index'

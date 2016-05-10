@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
 
       respond_to do |format|
        if @activity.save
-         format.html { redirect_to trip_activities_path(id: @activity.id), notice: 'Activity added!' }
+         format.html { redirect_to trip_path(@activity.trip_id), notice: 'Activity added!' }
        else
          format.html { render action: 'new' }
        end
@@ -32,7 +32,7 @@ class ActivitiesController < ApplicationController
 
       respond_to do |format|
         if @activity.update(activity_params)
-          format.html { redirect_to trip_activity_path(id: @activity.id), notice: 'Activity updated' }
+          format.html { redirect_to trip_path(id: @activity.trip_id), notice: 'Activity updated' }
         else
           format.html { render action: 'edit' }
         end
@@ -40,8 +40,9 @@ class ActivitiesController < ApplicationController
     end
 
     def destroy
+      @activity = Activity.find(params[:id])
       @activity.destroy
-      redirect_to trip_activities_path
+      redirect_to trip_path(@activity.trip_id)
     end
 
     private

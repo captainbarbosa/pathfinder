@@ -38,11 +38,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rspec-rails'
-end
-
-group :test do
-  gem 'pry'
+  gem 'pry-rails'
+  gem 'quiet_assets'
 end
 
 group :development do
