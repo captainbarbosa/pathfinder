@@ -5,6 +5,7 @@ class TripsController < ApplicationController
   end
 
   def show
+    @trip = Trip.find(params[:id])
   end
 
   def new
@@ -12,8 +13,10 @@ class TripsController < ApplicationController
   end
 
   def create
+    @trip = Trip.new(trip_params)
+
     respond_to do |format|
-     if @trip.save(trip_params)
+     if @trip.save
        format.html { redirect_to trip_path(id: @trip.id), notice: 'Trip added!' }
      else
        format.html { render action: 'new' }
@@ -22,9 +25,12 @@ class TripsController < ApplicationController
   end
 
   def edit
+    @trip = Trip.find(params[:id])
   end
 
   def update
+    @trip = Trip.find(params[:id])
+
     respond_to do |format|
       if @trip.update(trip_params)
         format.html { redirect_to trip_path(id: @trip.id), notice: 'Trip updated' }
