@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
     end
 
     def new
-      @activity = Activity.new
+      @activity = Activity.new(trip_id: params[:trip_id])
     end
 
     def create
