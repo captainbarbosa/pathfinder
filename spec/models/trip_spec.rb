@@ -15,13 +15,11 @@ RSpec.describe Trip, type: :model do
     expect(trips(:iceland).user.id).to eq users(:leif_ericksson).id
   end
 
-  it 'should require both name and description for creation' do
-    @trip_without_name = Trip.create(name: 'Patagonia')
-    @trip_without_desc = Trip.create(description: '10 days of hiking')
+  it 'should require name' do
+    @trip_without_name = Trip.create(description: '10 days of hiking')
     @valid_trip = Trip.create(name: 'Patagonia', description: '10 days of hiking')
 
     expect(@trip_without_name.valid?).to be false
-    expect(@trip_without_desc.valid?).to be false
     expect(@valid_trip.valid?).to be true
   end
 end
