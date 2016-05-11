@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Trip, type: :model do
-  fixtures :trips, :users
+  fixtures :trips, :users, :activities
 
   it 'should have a name' do
     expect(trips(:iceland).name).to eq 'Iceland'
@@ -21,5 +21,13 @@ RSpec.describe Trip, type: :model do
 
     expect(@trip_without_name.valid?).to be false
     expect(@valid_trip.valid?).to be true
+  end
+
+  it 'should delete its activities when trip is deleted' do
+    @trip = trips(:iceland)
+    @activity = activities(:glacier_climbing)
+    @trip.destroy
+
+    expect(@trip.activities).to eq []
   end
 end
