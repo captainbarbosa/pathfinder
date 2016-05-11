@@ -4,18 +4,22 @@ glacier_climbing:
   trip: iceland
   date: 2016-01-01 11:00:00
   description: "We will have a tour guide"
+  location: [0,0]
 
 blue_lagoon:
   name: "Visit the Blue Lagoon"
   trip: iceland
   date: 2016-01-02 15:00:00
   description: "The water is always warm here"
+  location: [0,0]
 
 fishing:
   name: "Sunrise Fishing Trip"
   trip: iceland
   date: 2016-01-03 06:00:00
   description: "Looking to catch some cod and salmon"
+  location: [0,0]
+
 
 # ------- Activities in Greenland --------
 
