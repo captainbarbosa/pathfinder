@@ -11,7 +11,7 @@ class Activity < ActiveRecord::Base
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: location
+        coordinates: [longitude, latitude]
       },
       properties: {
         title: name,

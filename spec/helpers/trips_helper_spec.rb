@@ -7,6 +7,6 @@ RSpec.describe TripsHelper, type: 'helper' do
     result = JSON.parse(result)
     expect(result).to be_a Array
     expect(result[0]).to be_a Hash
-    expect(result[0]["geometry"]["coordinates"]).to eql [0.0, 0.0]
+    expect(result[0]["geometry"]["coordinates"]).to eql [-73.9967382,40.7230686]
   end
 end

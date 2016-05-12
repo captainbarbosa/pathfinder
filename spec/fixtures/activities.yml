@@ -4,21 +4,27 @@ glacier_climbing:
   trip: iceland
   date: 2016-01-01 11:00:00
   description: "We will have a tour guide"
-  location: [0,0]
+  latitude: "40.7230686"
+  longitude: "-73.9967382"
+  address: "27 Prince St, New York, NY 10012"
 
 blue_lagoon:
   name: "Visit the Blue Lagoon"
   trip: iceland
   date: 2016-01-02 15:00:00
   description: "The water is always warm here"
-  location: [0,0]
+  latitude: "40.7198158"
+  longitude: "-74.0104979"
+  address: "120 Hudson St, New York, NY 10013"
 
 fishing:
   name: "Sunrise Fishing Trip"
   trip: iceland
   date: 2016-01-03 06:00:00
   description: "Looking to catch some cod and salmon"
-  location: [0,0]
+  latitude: "40.7152384"
+  longitude: "-74.0170926"
+  address: "215 Murray Street, New York, NY 10282"
 
 
 # ------- Activities in Greenland --------
