@@ -11,15 +11,22 @@ $(document).ready(function() {
         zoom: 10
     });
 
-    map.on('load', function() {
-        map.addSource("markers", {
-            "type": "geojson",
-            "data": {
-                "type": "FeatureCollection",
-                "features": activities
-            }
-        });
+    // Load geoJSON
+    var mapMarkers = {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": activities // Coming from trips#show script tag
+        }
+    };
 
+    // Do the following only when the map is loaded
+    map.on('load', function() {
+
+        // Add marker source
+        map.addSource("markers", mapMarkers);
+
+        // Add marker styling
         map.addLayer({
             "id": "markers",
             "type": "symbol",
