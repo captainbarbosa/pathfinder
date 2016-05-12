@@ -28,11 +28,16 @@ $(document).ready(function() {
 
         // Center on map markers by creating an array of their coordinates
         markerCoordinates = [];
+
         mapMarkers.data.features.forEach(function(feature) {
           markerCoordinates.push(feature.geometry.coordinates);
         });
 
-        map.fitBounds(markerCoordinates);
+        if (markerCoordinates.length > 1) {
+          map.fitBounds(markerCoordinates);
+        } else {
+          map.flyTo({center: markerCoordinates[0], zoom: 12});
+        }
 
         // Add marker styling
         map.addLayer({
