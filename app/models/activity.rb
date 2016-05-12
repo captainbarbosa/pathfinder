@@ -4,7 +4,7 @@ class Activity < ActiveRecord::Base
   validates :name, :date, presence: true
 
   geocoded_by :address
-  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+  after_validation :geocode, if: ->(obj) { obj.address.present? && obj.address_changed? }
 
   def to_geojson
     {
