@@ -34,7 +34,7 @@ $(document).ready(function() {
         });
 
         if (markerCoordinates.length > 1) {
-          map.fitBounds(markerCoordinates);
+          map.fitBounds(markerCoordinates, {padding: 50});
         } else {
           map.flyTo({center: markerCoordinates[0], zoom: 12});
         }
