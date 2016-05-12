@@ -7,8 +7,8 @@ $(document).ready(function() {
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/outdoors-v9',
-        center: [-77.03656196594238, 38.89769637048576],
-        zoom: 10
+        center: [-13.7109375, 28.613459424004414],
+        zoom: 1
     });
 
     // Load geoJSON
@@ -25,6 +25,14 @@ $(document).ready(function() {
 
         // Add marker source
         map.addSource("markers", mapMarkers);
+
+        // Center on map markers by creating an array of their coordinates
+        markerCoordinates = [];
+        mapMarkers.data.features.forEach(function(feature) {
+          markerCoordinates.push(feature.geometry.coordinates);
+        });
+
+        map.fitBounds(markerCoordinates);
 
         // Add marker styling
         map.addLayer({
