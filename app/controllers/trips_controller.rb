@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
 
   def index
-    @trips = Trip.all
+    @trips = current_user.trips
   end
 
   def show
@@ -9,11 +9,11 @@ class TripsController < ApplicationController
   end
 
   def new
-    @trip = Trip.new
+    @trip = current_user.trips.build
   end
 
   def create
-    @trip = Trip.new(trip_params)
+    @trip = current_user.trips.build(trip_params)
 
     respond_to do |format|
      if @trip.save
@@ -49,6 +49,6 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:name, :description)
+    params.require(:trip).permit(:user_id, :name, :description)
   end
 end
