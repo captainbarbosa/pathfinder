@@ -16,3 +16,7 @@
 //= require turbolinks
 //=require map.js
 //= require bootstrap-datepicker
+
+$(document).ready(function(){
+    $('.datepicker').datepicker({format:"yyyy-mm-dd"});
+  });
