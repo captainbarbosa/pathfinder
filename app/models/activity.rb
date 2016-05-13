@@ -15,7 +15,7 @@ class Activity < ActiveRecord::Base
       },
       properties: {
         title: name,
-        date: date,
+        date: date.strftime("%a, %m/%d"),
         'marker-symbol' => 'circle'
       }
     }

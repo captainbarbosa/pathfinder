@@ -4,3 +4,19 @@
   width:100%;
   height: 475px;
 }
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.marker-title {
+    font-weight: 700;
+}
+
+.map-activity-title {
+  margin: 0px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}

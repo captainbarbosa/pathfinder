@@ -34,7 +34,7 @@ $(document).ready(function() {
         });
 
         if (markerCoordinates.length > 1) {
-          map.fitBounds(markerCoordinates, {padding: 50});
+          map.fitBounds(markerCoordinates, {padding: 80});
         } else {
           map.flyTo({center: markerCoordinates[0], zoom: 12});
         }
@@ -42,15 +42,33 @@ $(document).ready(function() {
         // Add marker styling
         map.addLayer({
             "id": "markers",
-            "type": "symbol",
+            "type": "circle",
             "source": "markers",
-            "layout": {
-                "icon-image": "{marker-symbol}-15",
-                "text-field": "{title}",
-                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                "text-offset": [0, 0.6],
-                "text-anchor": "top"
+            "paint": {
+              "circle-radius": 7,
+              "circle-color": "#FF0000"
             }
         });
+
+        map.on("click", function (e) {
+            var features = map.queryRenderedFeatures(e.point, { layers: ["markers"] });
+
+            if (!features.length) {
+                return;
+            }
+
+            var feature = features[0];
+
+            var popup = new mapboxgl.Popup()
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML("<p class='map-activity-title'>"+ feature.properties.title + "</p>" + feature.properties.date)
+                .addTo(map);
+        });
+
+        map.on('mousemove', function (e) {
+            var features = map.queryRenderedFeatures(e.point, { layers: ['markers'] });
+            map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+        });
+
     });
 });
