@@ -1,6 +1,6 @@
 // Start doing things only when DOM is ready
 $(document).ready(function() {
-
+  if ($("#map").length > 0 ) {
     mapboxgl.accessToken = 'pk.eyJ1IjoibmJiMTI4MDUiLCJhIjoiMUlFVjZWVSJ9.jeNyiaRq8MCHlXSlGQZIHA';
 
     // Initialize basemap
@@ -71,4 +71,5 @@ $(document).ready(function() {
         });
 
     });
+  }
 });
