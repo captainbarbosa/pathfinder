@@ -6,15 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Bootstrap CSS -->
-
-
-  <!-- Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <!-- Bootstrap JS -->
-
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   <!-- Fonts -->
@@ -26,8 +17,27 @@
 
 </head>
 <body>
-  <a href="/users/sign_out" data-method="delete">Log Out</a></li>
-<%= yield %>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="/users/sign_out" data-method="delete">Sign out</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="">Something</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="">Something</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>
