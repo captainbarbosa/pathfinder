@@ -1,7 +1,11 @@
 /*---------- Navbar ---------- */
-.navbar {
-  display: none; }
 
+/* Devices under 750px */
+.navbar {
+  display: none;
+}
+
+/* Devices over 750px */
 @media (min-width: 750px) {
 
   .navbar {
@@ -28,7 +32,7 @@
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .2rem;
-    margin-right: 35px;
+    margin-right: 3em;
     text-decoration: none;
     line-height: 6.5rem;
     color: #222;
@@ -43,7 +47,7 @@
     float: left;
     margin-bottom: 0;
     text-transform: uppercase;
-    margin-right: 8px;
+    margin-right: 7.5em;
     text-decoration: none;
     line-height: 6.5rem;
     color: #E36362
@@ -56,12 +60,30 @@
   #sign-out {
     float: right;
   }
+}
 
-  /*---------- Homepage ---------- */
-  .img-home {
-    /*opacity: 0.6;*/
+
+/*---------- Homepage ---------- */
+
+/* Devices under 750px */
+  h1.image-text-overlay {
+    display: block;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
   }
 
+  .button-container {
+    text-align: center;
+    margin-bottom: 0.3em
+  }
+
+/* Devices over 750px */
+@media (min-width: 750px) {
   h1.image-text-overlay {
     z-index: 1;
     position: absolute;
@@ -80,7 +102,7 @@
     position: absolute;
     width: 100%;
     margin-top: 25%;
-    margin-left: 39%;
+    text-align: center;
   }
 
   a.button.button-primary {
@@ -94,3 +116,4 @@
     background-color: #CC5958;
     border-color: #CC5958;
   }
+}
