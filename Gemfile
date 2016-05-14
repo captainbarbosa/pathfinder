@@ -29,8 +29,6 @@ gem 'devise'
 # Use ruby geocoder to turn addresses into coordinates
 gem 'geocoder'
 
-gem 'bootstrap-datepicker-rails'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
