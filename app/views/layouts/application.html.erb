@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
   <!-- Fonts -->
 
   <!-- Require mapbox CDNs -->
@@ -20,19 +20,20 @@
   <div class="container">
 
     <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a class="navbar-link" href="/users/sign_out" data-method="delete">Sign out</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="">Something</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="">Something</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-list">
+        <li class="icon-logo" id="logo">
+          <i class="fa fa-map-o" aria-hidden="true"></i>
+        </li>
+        <li class="navbar-item">
+          <a class = "navbar-link" id="logo-text" href="/">Pathfinder</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="/trips">Trips</a>
+        </li>
+        <li class="navbar-item" id="sign-out">
+          <a class="navbar-link" href="/users/sign_out" data-method="delete">Sign out</a>
+        </li>
+      </ul>
     </nav>
 
 
