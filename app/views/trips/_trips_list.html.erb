@@ -1,0 +1,16 @@
+<div class="centered-content">
+  <h3>Your Trips</h3>
+  <a class="button" href="/trips/new">Add a Trip</a>
+</div>
+
+
+<div class="twelve columns trips-index-container">
+  <% @trips.each do |trip| %>
+    <div class="trip-index-entry">
+      <h2><%= link_to trip.name, trip_path(trip) %></h2>
+      <p><"DATE RANGE"></p>
+      <%= link_to fa_icon(:pencil), edit_trip_path(trip) %>
+      <%= link_to fa_icon(:times), trip_path(trip), method: :delete %>
+    </div>
+  <% end %>
+</div>
