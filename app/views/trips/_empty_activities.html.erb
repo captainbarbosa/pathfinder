@@ -1,0 +1,5 @@
+<div class="centered-content">
+  <h4>You don't have any activities in <%= @trip.name %>.</h4>
+  <h4>Lets fix that.</h4>
+  <%= link_to "Add Activity", new_trip_activity_path(@trip.id), class: "button button-primary" %>
+</div>

@@ -1,20 +1,27 @@
-<%= form_for [@activity.trip, @activity] do |f| %>
+<%= form_for [@activity.trip, @activity], html: {class: "new-activity"} do |f| %>
   <%= f.hidden_field :trip_id %>
+  <div class="row">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "u-full-width" %>
+  </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="row">
+    <%= f.label :date %>
+    <%= f.text_field :date, id: "datepicker", class: "u-full-width" %>
+  </div>
 
-  <%= f.label :date %>
-  <%= f.text_field :date, id: "datepicker" %>
+  <div class="row">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "u-full-width" %>
+  </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <div class="row">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: "u-full-width" %>
+  </div>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-
-  <%= f.submit %>
- <% end %>
+<%= f.submit %>
+<% end %>
 
  <script>
     var picker = new Pikaday({ field: document.getElementById('datepicker') });

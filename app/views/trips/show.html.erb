@@ -1,17 +1,5 @@
-<h1><%= @trip.name %></h1>
-
-<%= link_to "Add Activity", new_trip_activity_path(@trip.id) %>
-<%= link_to "Back to Trips", trips_path %>
-<br>
-<% @trip.activities.each do |activity| %>
-  <%= activity.name %>
-  <%= link_to "Edit", edit_trip_activity_path(activity.trip_id, activity) %>
-  <%= link_to "Delete", trip_activity_path(activity.trip_id, activity), method: :delete  %>
-  <br>
+<% if @trip.activities.empty? %>
+  <%= render 'empty_activities' %>
+<% else %>
+  <%= render 'activities_list' %>
 <% end %>
-
-<div id="map"></div>
-
-<script type="text/javascript">
-  var activities = <%= raw activities_geojson(@trip) %>;
-</script>

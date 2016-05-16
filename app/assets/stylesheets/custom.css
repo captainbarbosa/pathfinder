@@ -192,7 +192,8 @@ input[type="password"]:focus {
 }
 
 /*---------- New Trip Forms ---------- */
-.new-trip {
+.new-trip,
+.new-activity {
   margin-top: 2em;
 }
 
@@ -273,5 +274,15 @@ input[type="password"]:focus {
 }
 
 .trip-index-entry a:hover{
+  color: #E36362;
+}
+
+/*---------- Add activity icon on map ---------- */
+.add-activity-icon {
+  position: relative;
+  padding: 0.2em;
+  z-index: 1;
+  float: right;
+  text-align: center;
   color: #E36362;
 }

@@ -1,0 +1,17 @@
+<% @trip.activities.each do |activity| %>
+  <%= activity.name %>
+  <%= link_to "Edit", edit_trip_activity_path(activity.trip_id, activity) %>
+  <%= link_to "Delete", trip_activity_path(activity.trip_id, activity), method: :delete  %>
+  <br>
+<% end %>
+<%= link_to "Add Activity", new_trip_activity_path(@trip.id), class: "button button-primary" %>
+
+<div id="map">
+  <a href="/trips/<%= @trip.id %>/activities/new"><i class="add-activity-icon fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
+</div>
+
+
+
+<script type="text/javascript">
+  var activities = <%= raw activities_geojson(@trip) %>;
+</script>
