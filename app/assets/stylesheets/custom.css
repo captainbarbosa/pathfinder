@@ -183,3 +183,55 @@ input[type="password"]:focus {
     padding: 0% 28% 0% 28%;
   }
 }
+
+/*---------- Flash Messages ---------- */
+.alert {
+    padding: 0.3em;
+    margin-bottom: 0.8em;
+    text-align: left;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #CC5958;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #CC5958;
+ }
+
+.alert-success {
+    background-color: rgb(222, 234, 242);
+    border-color: #d6e9c6;
+    color: #222222;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: rgba(34, 34, 34, 0.73);
+ }
+
+.notice-items {
+  margin: 0.4em 0em 0em 1.8em;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.1rem;
+}
+
+.close {
+  float: right;
+  padding-right: 0.8em;
+  text-decoration: none;
+  color: #222222;
+}
+
+#signup-errors{
+  margin-top: 0.5em;
+  padding: 0.7em 0.8em 0.1em 0.8em;
+  font-size: 0.9em;
+  letter-spacing: 0.1rem;
+}
