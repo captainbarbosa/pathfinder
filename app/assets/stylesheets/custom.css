@@ -1,14 +1,15 @@
 .centered-content {
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
+  padding-top: 2em;
+  text-align: center
 }
 
 /*---------- Links ---------- */
 a {
-  color: #1EAEDB; }
+  color: #222222; }
 a:hover {
   color: #E36362; }
-
 
 /*---------- Headers ---------- */
 
@@ -147,7 +148,7 @@ input[type="button"]:focus {
   }
 }
 
-/*---------- Forms ---------- */
+/*---------- Signup/Login Forms ---------- */
 .checkbox-label {
   display: inline-block;
   margin-left: 0.2em
@@ -180,8 +181,14 @@ input[type="password"]:focus {
   .form-container-centered {
     position: relative;
     width: 400px;
+    margin-top: 1.2em;
     padding: 0% 28% 0% 28%;
   }
+}
+
+/*---------- New Trip Forms ---------- */
+.new-trip {
+  margin-top: 2em;
 }
 
 /*---------- Flash Messages ---------- */

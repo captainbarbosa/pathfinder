@@ -1,11 +1,18 @@
-<%= form_for @trip do |f| %>
-  <% f.hidden_field :user_id %>
-  
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="form-container-centered">
+    <h2>Add a Trip</h2>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+    <%= form_for @trip, html: {class: "new-trip"} do |f| %>
+    <% f.hidden_field :user_id %>
+    <div class="row">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "u-full-width" %>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <div class="row">
+        <%= f.label :description %>
+        <%= f.text_field :description, class: "u-full-width" %>
+    </div>
+
+    <%= f.submit %>
+    <% end %>
+</div>
