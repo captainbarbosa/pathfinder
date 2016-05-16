@@ -1,7 +1,5 @@
-<%= link_to "Add Trip", new_trip_path %>
-<br>
-<% @trips.each do |trip| %>
-  <h2><%= link_to trip.name, trip_path(trip) %></h2>
-  <%= link_to "Edit", edit_trip_path(trip) %>
-  <%= link_to "Delete", trip_path(trip), method: :delete %>
+<% if @trips.empty? %>
+  <%= render 'empty_trips' %>
+<% else %>
+  <%= render 'trips_list' %>
 <% end %>
