@@ -285,4 +285,11 @@ input[type="password"]:focus {
   float: right;
   text-align: center;
   color: #E36362;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+}
+
+.add-activity-icon:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }

@@ -6,17 +6,20 @@
 }
 
 .mapboxgl-popup {
-  max-width: 400px;
   font: 12px/20px 'Open Sans', Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
+.mapboxgl-popup-close-button {
+  padding: 0px 12px;
+}
+
 .marker-title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .map-activity-title {
-  margin: 0px 0px 5px 0px;
+  margin: 15px 20px 0px 20px;
   font-size: 16px;
   font-weight: 600;
 }

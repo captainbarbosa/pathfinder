@@ -6,7 +6,7 @@ $(document).ready(function() {
     // Initialize basemap
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/outdoors-v9',
+        style: 'mapbox://styles/mapbox/light-v9',
         center: [-13.7109375, 28.613459424004414],
         zoom: 1
     });
@@ -46,7 +46,7 @@ $(document).ready(function() {
             "source": "markers",
             "paint": {
               "circle-radius": 7,
-              "circle-color": "#FF0000"
+              "circle-color": "#E36362"
             }
         });
 
