@@ -293,3 +293,44 @@ input[type="password"]:focus {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+/*---------- Activities Index ---------- */
+.activity-index-container {
+  margin-bottom: 8em;
+}
+
+.activity-container {
+  margin: 1em 5em;
+  padding: 1em;
+  border: 1px solid rgba(34, 34, 34, 0.17);
+  border-radius: 0.5em;
+}
+
+h2.activities-index-header {
+  display: block;
+  margin: 1em 0em;
+  text-align: center;
+}
+
+.activity-title {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  color: #E36362;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.activity-date {
+  display: inline-block;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: rgba(34, 34, 34, 0.61);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.activity-description {
+  margin-left: 0.8em;
+}
