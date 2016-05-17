@@ -16,3 +16,4 @@
 //= require turbolinks
 //=require map.js
 //=require pickaday.js
+//=require flash_toggle.js
