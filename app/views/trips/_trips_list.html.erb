@@ -8,7 +8,9 @@
   <% @trips.each do |trip| %>
     <div class="trip-index-entry">
       <h2><%= link_to trip.name, trip_path(trip) %></h2>
-      <p><"DATE RANGE"></p>
+      <% unless trip.activities.empty? %>
+        <p><%= date_range(trip)[:start_date].strftime("%x") %> - <%= date_range(trip)[:end_date].strftime("%x") %></p>
+      <% end %>
       <%= link_to fa_icon(:pencil), edit_trip_path(trip) %>
       <%= link_to fa_icon(:times), trip_path(trip), method: :delete %>
     </div>
