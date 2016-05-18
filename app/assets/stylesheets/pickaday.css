@@ -257,3 +257,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-title select option {
   font-weight: normal;
 }
+
+/* Custom added css to compliment Skeleton theme on Pika time fork */
+
+table.pika-time {
+  margin: auto;
+}
