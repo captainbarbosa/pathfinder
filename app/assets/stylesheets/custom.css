@@ -270,7 +270,7 @@ input[type="password"]:focus {
 }
 
 .trip-index-entry:hover {
-  border: 0.2rem solid;
+  border: 1px solid #E36362;
 }
 
 .trip-index-entry a:hover{
@@ -295,6 +295,10 @@ input[type="password"]:focus {
 }
 
 /*---------- Activities Index ---------- */
+.activity-container:target {
+	border: 1px solid #E36362;
+}
+
 #trip-name-container {
   padding: 0;
 }
