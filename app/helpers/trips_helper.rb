@@ -7,6 +7,6 @@ module TripsHelper
     dates = trip.activities.pluck(:date)
     max_date = dates.max_by { |x| x }
     min_date = dates.min_by { |x| x }
-    { start_date: max_date, end_date: min_date }
+    { start_date: min_date, end_date: max_date }
   end
 end
