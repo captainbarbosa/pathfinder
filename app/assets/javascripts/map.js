@@ -61,7 +61,7 @@ $(document).ready(function() {
 
             var popup = new mapboxgl.Popup()
                 .setLngLat(feature.geometry.coordinates)
-                .setHTML("<p class='map-activity-title'>"+ feature.properties.title + "</p>" + feature.properties.date)
+                .setHTML("<p class='map-activity-title'><a href='#"+feature.properties.title+"'>"+ feature.properties.title + "</a></p>" + feature.properties.date)
                 .addTo(map);
         });
 

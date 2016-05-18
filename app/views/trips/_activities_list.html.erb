@@ -1,10 +1,9 @@
-<% @trip.activities.each do |activity| %>
-  <%= activity.name %>
-  <%= link_to "Edit", edit_trip_activity_path(activity.trip_id, activity) %>
-  <%= link_to "Delete", trip_activity_path(activity.trip_id, activity), method: :delete  %>
-  <br>
-<% end %>
-<%= link_to "Add Activity", new_trip_activity_path(@trip.id), class: "button button-primary" %>
+<div class="centered-content" id="trip-name-container">
+  <h2 id="trip-name">
+    <%= @trip.name %>
+  </h2>
+  <p id="trip-date"><%= date_range(@trip)[:start_date].strftime("%x") %> - <%= date_range(@trip)[:end_date].strftime("%x") %></p>
+</div>
 
 <div id="map">
   <a href="/trips/<%= @trip.id %>/activities/new"><i class="add-activity-icon fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
@@ -16,11 +15,13 @@
 
 <div class="activity-index-container">
   <% @trip.activities.each do |activity| %>
-    <div class="activity-container">
-      <h3 class="activity-title"><%= activity.name %></h3> <h3 class="activity-date"> • <%= activity.date.strftime("%x") %></h3>
-      <p class="activity-description"><%= activity.description %></p>
-      <%= link_to fa_icon(:pencil), edit_trip_activity_path(activity.trip_id, activity) %> <%= link_to fa_icon(:times), trip_activity_path(activity.trip_id, activity), method: :delete %>
-    </div>
+    <a name="<%= activity.name %>">
+      <div class="activity-container">
+        <h3 class="activity-title"><%= activity.name %></h3> <h3 class="activity-date"> • <%= activity.date.strftime("%x") %></h3>
+        <p class="activity-description"><%= activity.description %></p>
+        <%= link_to fa_icon(:pencil), edit_trip_activity_path(activity.trip_id, activity) %> <%= link_to fa_icon(:times), trip_activity_path(activity.trip_id, activity), method: :delete %>
+      </div>
+    </a>
   <% end %>
 </div>
 

@@ -295,6 +295,18 @@ input[type="password"]:focus {
 }
 
 /*---------- Activities Index ---------- */
+#trip-name-container {
+  padding: 0;
+}
+
+#trip-name {
+  font-size: 2.3em;
+}
+
+#trip-date {
+  margin-bottom: 0.8em;
+}
+
 .activity-index-container {
   margin-bottom: 8em;
 }
