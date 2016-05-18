@@ -4,7 +4,7 @@ It is still in active development so there will be frequent updates.
 
 The goal of creating Pathfinder was to create a visually appealing, easy to use interface for itinerary planning with a geospatial aspect in mind.    
 
-Pathfinder was created with [Ruby on Rails](https://github.com/rails/rails), [Skeleton](http://getskeleton.com/) and [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/).
+Pathfinder was created with [Ruby on Rails](https://github.com/rails/rails), [Skeleton](http://getskeleton.com/), [Owen Mead-Robins'](https://github.com/owenmead) fork of [Pikaday](https://github.com/owenmead/Pikaday), and [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/).
 
 
 ### Try it out
