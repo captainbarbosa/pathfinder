@@ -26,15 +26,47 @@ $(document).ready(function() {
         // Add marker source
         map.addSource("markers", mapMarkers);
 
-        // Center on map markers by creating an array of their coordinates
-        markerCoordinates = [];
+        // Begin building a bounding box from coordinates
+        var markerCoordinates = [];
 
         mapMarkers.data.features.forEach(function(feature) {
           markerCoordinates.push(feature.geometry.coordinates);
         });
 
+        // Collect all longitudes and put them in an array
+        var longitudes = [];
+        markerCoordinates.forEach(function(coordinate) {
+          longitudes.push(coordinate[0]);
+        });
+
+        // Collect all latitudes and put them in an array
+        var latitudes = [];
+        markerCoordinates.forEach(function(coordinate) {
+          latitudes.push(coordinate[1]);
+        });
+
+        // Select lowest longitude
+        var lowestLong = Math.min.apply(null, longitudes);
+
+        // Select highest longitude
+        var highestLong = Math.max.apply(null, longitudes);
+
+        // Select lowest latitude
+        var lowestLat = Math.min.apply(null, latitudes);
+
+        // Select highest latitude
+        var highestLat = Math.max.apply(null, latitudes);
+
+        var sw = new mapboxgl.LngLat(lowestLong, lowestLat);
+        var ne = new mapboxgl.LngLat(highestLong, highestLat);
+
+        // Create bounding box
+        var boundingCoordinates = new mapboxgl.LngLatBounds(sw, ne);
+
+        // Fit to bounding box if there is 1+ coordinate,
+        // otherwise center on single coordinate
         if (markerCoordinates.length > 1) {
-          map.fitBounds(markerCoordinates, {padding: 100});
+          map.fitBounds(boundingCoordinates, {padding: 100});
         } else {
           map.flyTo({center: markerCoordinates[0], zoom: 12});
         }
