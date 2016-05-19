@@ -7,6 +7,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    @activities = Activity.where(trip_id: @trip.id).order(:date)
   end
 
   def new

@@ -350,3 +350,16 @@ h2.activities-index-header {
 .activity-description {
   margin-left: 0.8em;
 }
+
+.action-icon-container {
+  text-align: right;
+}
+
+.activity-distance {
+  margin-top: 2em;
+  font-size: 0.8em;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}

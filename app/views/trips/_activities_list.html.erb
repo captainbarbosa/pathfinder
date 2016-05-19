@@ -14,12 +14,13 @@
 <h2 class="activities-index-header">Itinerary Details</h2>
 
 <div class="activity-index-container">
-<% @trip.activities.order(:date).each do |activity| %>
+<% @activities.each_with_index do |activity, i| %>
     <div class="activity-container" id="<%= activity.name %>">
       <h3 class="activity-title"><%= activity.name %></h3> <h3 class="activity-date"> • <%= activity.date.strftime("%x") %></h3>
       <p class="activity-description"><%= activity.description %></p>
-      <%= link_to fa_icon(:pencil), edit_trip_activity_path(activity.trip_id, activity) %> <%= link_to fa_icon(:times), trip_activity_path(activity.trip_id, activity), method: :delete %>
+      <div class="action-icon-container"><%= link_to fa_icon(:pencil), edit_trip_activity_path(activity.trip_id, activity) %> <%= link_to fa_icon(:times), trip_activity_path(activity.trip_id, activity), method: :delete %></div>
     </div>
+    <div class="distance-container"><p class="activity-distance"><%= distance_to_next(activity, @activities[i+1]) %> miles to next activity</p></div>
   </a>
 <% end %>
 
