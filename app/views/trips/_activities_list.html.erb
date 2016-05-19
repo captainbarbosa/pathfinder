@@ -14,7 +14,7 @@
 <h2 class="activities-index-header">Itinerary Details</h2>
 
 <div class="activity-index-container">
-<% @trip.activities.each do |activity| %>
+<% @trip.activities.order(:date).each do |activity| %>
     <div class="activity-container" id="<%= activity.name %>">
       <h3 class="activity-title"><%= activity.name %></h3> <h3 class="activity-date"> • <%= activity.date.strftime("%x") %></h3>
       <p class="activity-description"><%= activity.description %></p>
