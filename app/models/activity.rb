@@ -1,7 +1,7 @@
 class Activity < ActiveRecord::Base
   belongs_to :trip
 
-  validates :name, :date, presence: true
+  validates :name, :date, :address, presence: true
 
   validates :activity_type, inclusion: { in: %w(eat sleep do),
     message: "%{value} is not a valid activity type" }
