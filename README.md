@@ -20,3 +20,9 @@ Pathfinder was created with [Ruby on Rails](https://github.com/rails/rails), [Sk
 * **Through localhost**:    
    If you have Rails installed, you can also download and run it locally by entering    
    `rake db:create`, `rake db:migrate`, and `rails s` within the directory.
+
+### Things that need fixing:    
+- [ ] Fix NaN that occurs from distance method in activities view that comes after last activity (ok locally, broken on Heroku)
+- [ ] Fix flash messages on new activity
+- [ ] Improve time format in datepicker
+- [ ] Restyle activities listings
