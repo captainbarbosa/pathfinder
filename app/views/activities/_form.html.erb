@@ -16,6 +16,10 @@
   </div>
 
   <div class="row">
+    <%= f.label :activity_type %>
+    <%= select(:activity, :activity_type, [['Eat', 'eat'], ['Sleep', 'sleep'], ['Do', 'do']], prompt: "Activity Type") %>
+
+  <div class="row">
     <%= f.label :address %>
     <%= f.text_field :address, class: "u-full-width" %>
   </div>

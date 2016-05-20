@@ -7,6 +7,7 @@ glacier_climbing:
   latitude: "40.7230686"
   longitude: "-73.9967382"
   address: "27 Prince St, New York, NY 10012"
+  activity_type: "Do"
 
 blue_lagoon:
   name: "Visit the Blue Lagoon"
@@ -16,6 +17,7 @@ blue_lagoon:
   latitude: "40.7198158"
   longitude: "-74.0104979"
   address: "120 Hudson St, New York, NY 10013"
+  activity_type: "Do"
 
 fishing:
   name: "Sunrise Fishing Trip"
@@ -25,6 +27,7 @@ fishing:
   latitude: "40.7152384"
   longitude: "-74.0170926"
   address: "215 Murray Street, New York, NY 10282"
+  activity_type: "Do"
 
 
 # ------- Activities in Greenland --------
@@ -34,18 +37,21 @@ ice_climbing:
   trip: greenland
   date: 2016-02-01 11:00:00
   description: "Pick up climbing gear at the base first"
+  activity_type: "Do"
 
 farm_visit:
   name: "Family Farm Visit"
   trip: greenland
   date: 2016-02-02 18:00:00
   description: "Auntie Ericksson will have a meal ready for us"
+  activity_type: "Do"
 
 ice_fishing:
   name: "Ice Fishing"
   trip: greenland
   date: 2016-02-03 12:00:00
   description: "Don't forget the fishing poles"
+  activity_type: "Do"
 
 # ------- Activities in Newfoundland --------
 
@@ -54,15 +60,18 @@ location_scouting:
   trip: newfoundland
   date: 2016-03-01 09:00:00
   description: "Figure out where we should settle down"
+  activity_type: "Do"
 
 grape_farm:
   name: "Visit the Grape Farm"
   trip: newfoundland
   date: 2016-03-02 13:00:00
   description: "Load up a few bushels of grapes"
+  activity_type: "Do"
 
 build_houses:
   name: "Build Houses"
   trip: newfoundland
   date: 2016-03-03 08:00:00
   description: "Once we've found a good spot to settle in"
+  activity_type: "Do"

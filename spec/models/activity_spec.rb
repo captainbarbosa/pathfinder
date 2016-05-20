@@ -21,9 +21,9 @@ RSpec.describe Activity, type: :model do
 
   it 'should require name, and date for creation' do
     @trip = trips(:iceland)
-    @activity_without_name = Activity.create(trip_id: @trip.id, date: '2016-05-10 17:32:02')
-    @activity_without_date = Activity.create(trip_id: @trip.id, name: 'Whale Watching')
-    @valid_activity = Activity.create(trip_id: @trip.id, name: 'Whale Watching', date: '2016-05-10 17:32:02')
+    @activity_without_name = Activity.create(trip_id: @trip.id, date: '2016-05-10 17:32:02', activity_type: 'eat')
+    @activity_without_date = Activity.create(trip_id: @trip.id, name: 'Whale Watching', activity_type: 'do')
+    @valid_activity = Activity.create(trip_id: @trip.id, name: 'Whale Watching', date: '2016-05-10 17:32:02', activity_type: 'do')
 
     expect(@activity_without_name.valid?).to be false
     expect(@activity_without_date.valid?).to be false

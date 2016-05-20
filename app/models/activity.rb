@@ -3,6 +3,9 @@ class Activity < ActiveRecord::Base
 
   validates :name, :date, presence: true
 
+  validates :activity_type, inclusion: { in: %w(eat sleep do),
+    message: "%{value} is not a valid activity type" }
+
   geocoded_by :address
   after_validation :geocode, if: ->(obj) { obj.address.present? && obj.address_changed? }
 
