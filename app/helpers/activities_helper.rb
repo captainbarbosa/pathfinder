@@ -1,5 +1,6 @@
 module ActivitiesHelper
   def distance_to_next(a, b)
-    a.distance_to(b, :mi).round(2)
+    dist = a.distance_to(b, :mi).round(2)
+    "#{dist} miles to next activity" unless b.nil?
   end
 end
