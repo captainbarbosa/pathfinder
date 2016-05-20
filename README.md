@@ -11,6 +11,11 @@ Pathfinder was created with [Ruby on Rails](https://github.com/rails/rails), [Sk
 
 * **On Heroku**:    
    Pathfinder is deployed on Heroku [here](https://fierce-everglades-36360.herokuapp.com/)
+   To see an account with populated data, log in with the following credentials:        
+   ```
+   Username: user@user.com
+   Password: password
+   ```
 
 * **Through localhost**:    
    If you have Rails installed, you can also download and run it locally by entering    
